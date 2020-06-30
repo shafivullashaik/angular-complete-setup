@@ -1,44 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+				<section>Angular production ready setup</section>
+				<section>
+					Intro andy who this is for. For both people new to angular, and people proficvent, but want to get a new setup correct
+					Done on windowes, but all steps are same on all os after started using cli. Try to keep evg agnostic
+				</section>
+        <section>
+          <section>
+            Git & Node.js (LTS)
+          </section>
+          <section>
+            Why node?
+          </section>
+        </section>
+        <section>
+          <section>
+            Angular CLI
+          </section>
+          <section>
+            What is it? Always use it
+          </section>
+				</section>
+				<section>
+					(Optional)
+					Setup github, with readme, and clone locally. Optionally use sourcetree, or any visula git tool
+				</section>
+				<section>
+					<section>
+						Install VSCode. Why code?
+					</section>
+					<section>
+						Suggested plugins: Angular language service, material icons
+					</section>
+				</section>
+				<section>
+					(Optional on Windows)
+					Install windows terminal
+				</section>
+				<section>
+					<section>
+						(Skip here if dev enviorment is already ready)
+						Generate new angular project with angular cli
+					</section>
+					<section>
+						Adding material 
+					</section>
+					<section>
+						Adding normalizer
+					</section>
+					<section>
+						Creating components with cli
+					</section>
+					<section>
+						Angular scemantics (and other video?)
+					</section>
+					<section>
+						What else can be generated
+					</section>
+				</section>
+				<section>
+					<section>
+						Suggested folder structure (baded on styleguid)
+					</section>
+					<section>
+						Core?, shared, models, top level pages folders
+					</section>
+					<section>
+						No shared modules, cherry pick each time instead. Tree shaking for each route
+					</section>
+					<section>
+						Modules for all features
+					</section>
+					<section>
+						Lazy loading
+					</section>
+				</section>
+				<section>
+					Drop IE support, and gain css varables, flex & grid
+				</section>
+				<section>
+					Prettier
+				</section>
+				<section>
+					<section>
+						(Optional)
+						Github setup
+					</section>
+					<section>
+						Test, lint & build action for PR
+					</section>
+					<section>
+						Super linter?
+					</section>
+				</section>
+				<section>
+					<section>
+						(Optionally)
+						Deploy to firebase
+					</section>
+					<section>
+						create firebase project
+					</section>
+					<section>
+						manual publish
+					</section>
+					<section>
+						Auto github action publish
+					</section>
+				</section>
+				<section>
+					Continue lerning angular?
+				</section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-				history: true,
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        history: true,
         controls: false,
         progress: false,
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
 
-			Reveal.addEventListener("fragmentshown", function (event) {
+      Reveal.addEventListener("fragmentshown", function (event) {
         if (event.fragment.classList.value.includes("addFadeinBelow")) {
           Array.from(event.fragment.children).forEach((current) => {
             current.classList.add("fade-in");
@@ -52,6 +168,6 @@
           });
         }
       });
-		</script>
-	</body>
+    </script>
+  </body>
 </html>
