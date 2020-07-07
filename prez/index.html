@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+    <link rel="stylesheet" href="product-colors.css" />
 
     <!-- Theme used for syntax highlighted code -->
     <link
@@ -19,130 +20,186 @@
       href="plugin/highlight/monokai.css"
       id="highlight-theme"
     />
+
+    <style>
+      /* only for prez, not for speaker view */
+      @media screen and (min-width: 1500px) {
+        .slides {
+          width: 82% !important;
+        }
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        text-transform: none !important;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-				<section>
-					<h1>Angular production ready setup ⚙️</h1>
-				</section>
-				<section>
-					<!-- Intro andy who this is for.  -->
-					<h2>Who is this for?</h2>
-					<ol>
-						<li>New players</li>
-						<li>Proficient people</li>
-						<li>Tips and ticks!</li>
-					</ol>
-					<h3>Done on Windows</h3>
-					<side>
-						all steps are same on all os after started using cli. Try to keep evg agnostic
-					</side>
-				</section>
-				<section>
-					Skip to xxx if your env is already ready
-				</section>
+        <section>
+          <h1>
+            <span class="angular">Angular</span> production ready setup ⚙️
+          </h1>
+        </section>
+        <section>
+          <!-- Intro andy who this is for.  -->
+          <h1>Who is this for?</h1>
+          <ol>
+            <li class="fragment">New players</li>
+            <li class="fragment">Proficient people</li>
+            <li class="fragment">Tips and ticks!</li>
+          </ol>
+          <h2 class="fragment">Done on Windows</h2>
+          <aside class="notes">
+            all steps are same on all os after started using cli. Try to keep
+            evg agnostic
+          </aside>
+        </section>
+        <section>
+          Skip to xxx if your env is already ready
+        </section>
         <section>
           <section>
-						<h1>Git & Node.js (LTS)</h1>
-						<h3 class="fragment">Why Node.js?</h3>
-						<h3 class="fragment">Deno</h3>
+						<h1>Git</h1>
+						<h1 class="fragment">Node.js (LTS)</h1>
+            <h2 class="fragment">Why Node.js?</h2>
+            <h2 class="fragment">Deno</h2>
           </section>
         </section>
         <section>
           <section>
-						<h1>Angular CLI</h1>
-						<h3 class="fragment">Generate code</h3>
+            <h1>Angular CLI</h1>
+            <h3 class="fragment">Generate code</h3>
           </section>
-				</section>
-				<section>
-					<h1>Github</h1>
-					<h3 class="fragment">(Optional)</h3>
-					<h3 class="fragment">New Repo, Readme, and clone locally</h3>
-					
-				</section>
-				<section>
-					<h1>Visual Git tool</h1>
-					<h3 class="fragment">(Optional)</h3>
-					<h1 class="fragment">Sourcetree</h1>
-				</section>
-				<section>
-					<section>
-						<h1>Visual Studio Code</h1>
-						<h2 class="fragment">Why code?</h2>
-					</section>
-					<section>
-						<h2>Suggested plugins</h2>
-						<ul>
-							<li class="fragment">Angular language service</li>
-							<li class="fragment">material icons</li>
-						</ul>
-					</section>
-				</section>
-				<section>
-					<h2>(Optional on Windows)</h2>
-					<h1 class="fragment">Windows Terminal</h1>
-					<!--  use trailer footage? -->
-				</section>
-				<section>
-					<section>
-						<!-- (Skip here if dev enviorment is already ready) -->
-						<h1>Angular Cli</h1>
-						<h1>Generate angular project</h1>
-					</section>
-					<section>
-						<h1>Adding material</h1>
-					</section>
-					<section>
-						<h1>Adding normalizer</h1>
-					</section>
-					<section>
-						<h1>Creating a components</h1>
-					</section>
-					<section>
-						<h1>Angular Schematics</h1>
-					</section>
-					<section>
-						What else can be generated
-					</section>
-				</section>
-				<section>
-					<section>
-						Suggested folder structure (baded on styleguid)
-					</section>
-					<section>
-						Core?, shared, models, top level pages folders
-					</section>
-					<section>
-						No shared modules, cherry pick each time instead. Tree shaking for each route
-					</section>
-					<section>
+        </section>
+        <section>
+          <h1>Github</h1>
+          <h3 class="fragment">(Optional)</h3>
+          <!-- <h3 class="fragment">New Repo, Readme, and clone locally</h3> -->
+        </section>
+        <section>
+          <h1>Visual Git tool</h1>
+          <h3 class="fragment">(Optional)</h3>
+          <h1 class="fragment">Sourcetree</h1>
+        </section>
+        <section>
+          <section>
+            <h1>Visual Studio Code</h1>
+            <h2 class="fragment">It's free</h2>
+          </section>
+          <section>
+            <h1>Suggested plugins</h1>
+            <ul>
+              <li class="fragment">Angular language service</li>
+              <li class="fragment">material icons</li>
+              <li class="fragment">Prettier</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>Windows Terminal</h1>
+          <h2 class="fragment">(Optional on Windows)</h2>
+          <!--  use trailer footage? -->
+        </section>
+        <section>
+          <section>
+            <!-- (Skip here if dev enviorment is already ready) -->
+            <h1>Angular Cli</h1>
+            <h1 class="fragment">Generate project</h1>
+            <pre class="fragment"><code class="BASH" data-trim contenteditable>
+              ng new MyProject --directory=./ --strict
+            </code></pre>
+          </section>
+          <section>
+            <h1>Add material</h1>
+          </section>
+          <section>
+            <h1>Add normalizer</h1>
+          </section>
+          <!-- <section>
+            <h1>Summary</h1>
+            <ol>
+              <li class="fragment">Generate project</li>
+              <li class="fragment">Add material</li>
+              <li class="fragment">Add normalizer</li>
+            </ol>
+          </section> -->
+        </section>
+        <section>
+          <section>
+            <h1>Folder structure</h1>
+            <h2 class="fragment">https://angular.io/guide/styleguide</h2>
+            <h2 class="fragment">Get a lot for free with CLI</h2>
+            <h1 class="fragment">Depending on size</h1>
+          </section>
+          <section>
+            <h1>Core folder</h1>
+            <h1 class="fragment">Shared folder</h1>
+            <h1 class="fragment">Models folder</h1>
+            <h1 class="fragment">No shared module</h1>
+            <h1 class="fragment">Top level page</h1>
+            <!-- , cherry pick each time instead. Tree shaking for each route -->
+            <!-- Each folder is top level page -->
+          </section>
+          <!-- <section>
 						Modules for all features
+					</section> -->
+
+					<section>
+						<h1>Creating a page/route</h1>
+						<h2 class="fragment">Open in terminal</h2>
+						<pre class="fragment"><code class="BASH" data-trim contenteditable>
+              ng new MyProject --directory=./ --strict
+            </code></pre>
+          </section>
+
+          <section>
+            <h1>Many small modules</h1>
+            <h1 class="fragment">Routes path file</h1>
+            <h1 class="fragment">Lazy loading</h1>
+          </section>
+          <section></section>
+        </section>
+        <section>
+          <h1>
+            No IE support 🎉
+          </h1>
+          <h2 class="fragment">css variables, flex & grid</h2>
+        </section>
+        <section>
+          <h1>Prettier</h1>
+        </section>
+        <section>
+					<h1>Cypress</h1>
+					<h2 class="fragment">Full setup in future video</h2>
+        </section>
+        <section>
+          <section>
+            <!-- (Optional) -->
+            <h1>Github setup</h1>
+          </section>
+          <section>
+            <h1>Github Actions</h1>
+						<h1 class="fragment">PR & Deploy</h1>
+						<h1 class="fragment">
+							Test, lint & build
+						</h1>
+						<h1 class="fragment">Branch protection</h1>
 					</section>
 					<section>
-						Lazy loading
 					</section>
-				</section>
-				<section>
-					Drop IE support, and gain css varables, flex & grid
-				</section>
-				<section>
-					Prettier
-				</section>
-				<section>
-					<section>
-						(Optional)
-						Github setup
-					</section>
-					<section>
-						Test, lint & build action for PR
-					</section>
-					<section>
-						Super linter?
-					</section>
-				</section>
-				<section>
-					<section>
+        </section>
+
+        <section>
+          <h1>Deploy to firebase</h1>
+          <h1 class="fragment">Subscribe for video</h1>
+        </section>
+        <!-- <section>
 						(Optionally)
 						Deploy to firebase
 					</section>
@@ -154,10 +211,11 @@
 					</section>
 					<section>
 						Auto github action publish
-					</section>
-				</section>
+					</section> -->
+
 				<section>
-					Continue lerning angular?
+					<h1>Ready to go</h1>
+					<h1 class="fragment">Thanks for watching</h1>
 				</section>
       </div>
     </div>
