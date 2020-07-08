@@ -57,9 +57,10 @@
         font-family: monospace;
         text-transform: none;
         font-size: 30px;
-        width: 88%;
+        width: 89%;
         margin: auto;
-        padding: 2px 6px;
+				padding: 2px 6px;
+				margin-bottom: 5px;
       }
 
       .npm-script .ng {
@@ -84,7 +85,7 @@
           <h1 style="margin-bottom: 110px;">
             <span class="angular">Angular</span> production ready setup ⚙️
           </h1>
-          <h2 class="fragment">For new and experienced developers</h2>
+          <h2 class="fragment">For new and <span class="angular">experienced</span> developers</h2>
         </section>
         <!-- <section>
           <h1>Who is <i>this</i> for?</h1>
@@ -115,11 +116,14 @@
         <section>
           <section>
             <h1 class="angular">Angular CLI</h1>
-            <h2 class="fragment">Generate code ⚙️</h2>
+						<h2 class="fragment">Generate code ⚙️</h2>
+						<div class="npm-script fragment">
+              <span class="ng">npm</span> install <span class="args">-g</span> @angular/cli
+						</div>
           </section>
         </section>
         <section>
-          <h1>Github</h1>
+          <h1>Github Repo</h1>
           <h3 class="fragment">(Optional)</h3>
           <!-- <h3 class="fragment">New Repo, Readme, and clone locally</h3> -->
         </section>
@@ -146,14 +150,15 @@
         </section>
         <section>
           <h1><span class="microsoft">Windows</span> Terminal</h1>
-          <h2 class="fragment">(Optional on <span class="microsoft">Windows</span>)</h2>
+					<h2 class="fragment">(Optional on <span class="microsoft">Windows</span>)</h2>
+					<h2 class="fragment">Can use terminal in <span class="vscode">VSCode</span></h2>
           <!--  use trailer footage? -->
           <!-- https://www.youtube.com/watch?v=8gw0rXPMMPE -->
         </section>
         <section>
           <section>
             <!-- (Skip here if dev enviorment is already ready) -->
-            <h1 class="angular">Angular Cli</h1>
+            <h1 class="angular">Angular CLI</h1>
             <h1 class="fragment">Generate project</h1>
             <!-- <pre class="fragment"><code class="BASH" data-trim contenteditable>
               ng new MyProject --directory=./ --strict
@@ -161,6 +166,10 @@
             <div class="npm-script fragment">
               <span class="ng">ng</span> new MyProject
               <span class="args">--directory=./ --strict</span>
+						</div>
+						<div class="npm-script fragment">
+              <span class="ng">ng</span> serve
+              <span class="args">-o</span>
             </div>
           </section>
           <section>
@@ -168,7 +177,7 @@
             <!-- <pre class="fragment"><code class="BASH" data-trim contenteditable>
               ng add @angular/material
 						</code></pre> -->
-            <div class="npm-script">
+            <div class="npm-script fragment">
               <span class="ng">ng</span> add @angular/material
             </div>
           </section>
@@ -207,7 +216,7 @@
             <h2 class="fragment">Shared <span class="folder">folder</span></h2>
             <h2 class="fragment">Models <span class="folder">folder</span></h2>
             <h2 class="fragment">Shared <span class="angular">modules</span></h2>
-            <h2 class="fragment">No shared <span class="angular">module</span></h2>
+            <h2 class="fragment">Not one big shared <span class="angular">module</span></h2>
             <h2 class="fragment">Top level pages</h2>
             <!-- , cherry pick each time instead. Tree shaking for each route -->
             <!-- Each folder is top level page -->
@@ -234,14 +243,29 @@
           <h1 class="prettier">Prettier</h1>
         </section>
         <section>
-          <h1>Cypress</h1>
-          <h2 class="fragment">Full setup in future video</h2>
+					<h1>Testing</h1>
+					<div class="npm-script fragment">
+						<span class="ng">ng</span> test
+					</div>
+					<div class="npm-script fragment">
+						<span class="ng">ng</span> test
+						<span class="args">--watch=false --browsers=ChromeHeadless</span>
+					</div>
+          <h1 class="fragment">Cypress</h1>
+					<div class="npm-script fragment">
+						<span class="ng">npm</span> install cypress
+						<span class="args">--save-dev</span>
+					</div>
+					<div class="npm-script fragment">
+						<span class="ng">npx</span> cypress open
+					</div>
+          <h2 class="fragment">Full setup in <i>future</i> video 📺</h2> 
         </section>
         <section>
           <section>
             <!-- (Optional) -->
             <h1>Github setup</h1>
-            <h1>github.com/pricing</h1>
+            <!-- <h1>github.com/pricing</h1> -->
           </section>
           <section>
             <h1 class="github-actions">Github Actions</h1>
@@ -274,6 +298,7 @@
         <section>
           <h1>Ready to go 🚀</h1>
           <h1 class="fragment">Thanks for watching</h1>
+          <h1 class="fragment">Leave a comment</h1>
         </section>
       </div>
     </div>
