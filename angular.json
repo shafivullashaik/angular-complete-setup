@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -95,6 +96,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -130,6 +132,6 @@
   },
   "defaultProject": "MyProject",
   "cli": {
-    "analytics": false
+    "analytics": "329fb572-764b-4485-9380-0442b26c92d9"
   }
 }
